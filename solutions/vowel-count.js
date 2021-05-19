@@ -2,7 +2,7 @@
 
 
 // Return the number (count) of vowels in the given string.
-// solution 1
+// solution 1 : O(1)
 function getCount(str) {
     var vowelsCount = 0;
 
@@ -14,7 +14,13 @@ function getCount(str) {
       }
     });
     
+    
     return vowelsCount;
+  }
+
+  // solution 2: O(n)
+  function getCount(str) {
+    return (str.match(/[aeiou]/ig) || []).length
   }
 
   // getCount('hello world');
